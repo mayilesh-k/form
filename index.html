@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="mayil.css">
+</head>
+<body>
+  <header>
+    <div>
+      <a href="a">Home</a>
+      <a href="a">About</a>
+      <a href="a">Signup</a>
+      <a href="a">contact us</a>
+    </div>
+    <br>
+    <div class="na">
+        ONE PIECE FORM
+    </div>
+  </header>
+
+  <div class="container">
+    <form action= "">
+      <div>
+      <label class="n" for="name">Name</label>
+      <input class="name" type="text" id="name" name="name" >
+      <div class="error"></div>
+      </div>
+      <div>
+      <label class="n" for="email">Email</label>
+      <input class="email" type="email" id="email" name="email" >
+      <div class="error"></div>
+      </div>
+      <div>
+      <label class="n" for="ph_no">ph_no</label>
+      <input class="pho" type="text" id="ph_no" name="ph_no" >
+      <div class="error"></div>
+      </div>
+      <div>
+      <p class="travel">Select</p>
+      <input type="radio" id="flight" name="travel" value="Flight"><label for="flight">gomu-gomu fruit</label><br>
+      <input type="radio" id="bus" name="travel" value="Bus"><label for="bus">op-op fruit</label><br>
+      <input type="radio" id="train" name="travel" value="Train"><label for="train">cut-cut fruit</label><br>
+      <div class="error"></div>
+      </div>
+
+      <button class="submit" type="button" onclick="submitdata()">Submit</button>
+      <button class="reset" type="reset">Reset</button>
+    </form>
+  </div>
+  <script>
+    function submitdata() {
+      let name1 = document.getElementById("name");
+      console.log(name1.value);
+      let finalname = name1.value;
+
+      let email1 = document.getElementById("email");
+      console.log(email1.value);
+      let finalemail = email1.value;
+
+      let pho1 = document.getElementById("ph_no");
+      console.log(pho1.value);
+      let finalpho = pho1.value;
+
+      let travel1 = document.getElementsByName("travel");
+      let tra ="";
+      for (let val of travel1){
+        if(val.checked){
+            tra = val.value;
+        }
+      }
+      console.log(tra);
+      let finaltravel = tra;
+
+      console.log(finalname);
+      console.log(finalemail);
+      console.log(finalpho);
+      console.log(finaltravel);
+  
+if(finalname === ""){
+    setError(name1, "Name is empty");
+} else {
+    setSuccess(name1);
+}
+
+if(finalemail === ""){
+    setError(email1, "Email is empty");
+} else {
+    setSuccess(email1);
+}
+
+if(finalpho === ""){
+    setError(pho1, "Number is empty");
+} else {
+    setSuccess(pho1);
+}
+
+if(finaltravel === ""){
+    setError(travel1[0], "travel is empty");
+} else {
+    setSuccess(travel1[0]);
+}
+}
+    function setError(element,msg){
+      let parent=element.parentElement;
+      let error=parent.querySelector(".error");
+      error.innerText=msg;
+    }
+    function setSuccess(element){
+      let parent=element.parentElement;
+      let error=parent.querySelector(".error");
+      error.innerText="";
+    }
+    document.querySelector(".reset").addEventListener("click", function () {
+    const errorElements = document.querySelectorAll(".error");
+    errorElements.forEach(el => el.innerText = "");
+  });
+  
+</script>
+</body>
+</html>

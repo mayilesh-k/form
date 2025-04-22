@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('36f90b164894f9cea9c6f6fcfe86fce5.jpg'); 
+    background-size: cover;
+  }
+  .error{
+    display: block;
+    color: rgb(238, 24, 24);
+    padding: 0px;
+    width: 200px;
+    height: 25px;
+  }
+  header {
+    padding: 10px 0;
+  }
+  
+  div a {
+    color: rgba(8, 7, 7, 0.733);
+    text-decoration: none;
+    font-size: 24px;
+    text-shadow:  0 8px 16px rgb(0, 0, 0);
+    display: inline-block;
+    width: 8%;
+    padding: 2px 2px 2px 10px;
+  }
+  .container {
+    background-color: #0b0b0b2f;
+    color: rgb(245, 248, 247);
+    font-size: 20px;
+    width: 350px;
+    padding: 30px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin:50px auto;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  }
+  
+  .name,.email,.pho{
+    display: block;
+    background-color: rgba(234, 243, 243, 0.819);
+    color: white;
+    width: 200px;
+    height: 30px;
+    padding: 2px 2px 2px 2px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+    margin: 10px auto;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  }
+.na{
+    display: block;
+    color: rgba(250, 246, 246, 0.819);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    width: 99%;
+    text-shadow:  0 8px 16px rgb(0, 0, 0);
+}
+.reset,.submit{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(253, 255, 254);
+    color: rgb(16, 21, 20);
+}
+a:hover{
+    color: rgb(221, 23, 23);
+    font-size: 24px;
+}
+.travel{
+  font-size: larger;
+}
+.n{
+    display: block;
+    margin-top: none;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    width: 100%;
+    text-shadow:  0 8px 16px rgb(0, 0, 0);
+}
